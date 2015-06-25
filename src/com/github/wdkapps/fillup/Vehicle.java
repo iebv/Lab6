@@ -91,6 +91,17 @@ public class Vehicle implements Serializable {
 	}
 
 	public void setPlate(String plate) {
+		if (plate == null)
+			throw new IllegalArgumentException("null string");
+
+		if ((plate.length() < MIN_NAME_LENGTH) ||
+				(plate.length() > MAX_NAME_LENGTH))
+			throw new IllegalArgumentException("invalid registration plate length");
+
+		final String VALID_NAME_REGEX = "[a-zA-Z0-9][a-zA-Z0-9- ]*";
+		if (!plate.matches(VALID_NAME_REGEX))
+			throw new IllegalArgumentException("invalid format");
+
 		this.plate = plate;
 	}
 
@@ -99,14 +110,35 @@ public class Vehicle implements Serializable {
 	}
 
 	public void setBrand(String brand) {
+		if (brand == null)
+			throw new IllegalArgumentException("null string");
+
+		if ((brand.length() < MIN_NAME_LENGTH) ||
+				(brand.length() > MAX_NAME_LENGTH))
+			throw new IllegalArgumentException("invalid brand name length");
+
+		final String VALID_NAME_REGEX = "[a-zA-Z0-9][a-zA-Z0-9- ]*";
+		if (!brand.matches(VALID_NAME_REGEX))
+			throw new IllegalArgumentException("invalid format");
+
 		this.brand = brand;
 	}
-
 	public String getType() {
 		return type;
 	}
 
 	public void setType(String type) {
+		if (type == null)
+			throw new IllegalArgumentException("null string");
+
+		if ((type.length() < MIN_NAME_LENGTH) ||
+				(type.length() > MAX_NAME_LENGTH))
+			throw new IllegalArgumentException("invalid type name length");
+
+		final String VALID_NAME_REGEX = "[a-zA-Z0-9][a-zA-Z0-9- ]*";
+		if (!type.matches(VALID_NAME_REGEX))
+			throw new IllegalArgumentException("invalid format");
+
 		this.type = type;
 	}
 

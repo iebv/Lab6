@@ -217,7 +217,7 @@
     <string name="url_help_html">file:///android_asset/help-es.html</string>
     <string name="asset_stats_top_html">stats_top_es.html</string>
 
-    //caracteristicas del vehiculo añadidas
+    <!--caracteristicas del vehiculo añadidas-->
 
     <string name="vehicle_brand_label">Marca del vehiculo</string>
     <string name="vehicle_plate_label">Placa del vehiculo</string>
